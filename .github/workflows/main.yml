@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: nightingazer/docker-exp@v3
+        uses: ./
         with:
           who-to-greet: "Somebody"
       - name: Get the output time
