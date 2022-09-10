@@ -10,9 +10,8 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: nightingazer/docker-exp@v1
+        uses: nightingazer/docker-exp@v2
         with:
           who-to-greet: "Somebody"
       - name: Get the output time
         run: echo "The time was ${{steps.hello.outputs.time}}"
-        
