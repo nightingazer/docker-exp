@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: a job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: actions/docker-exp@v1
+        with:
+          who-to-greet: "Somebody"
+      - name: Get the output time
+        run: echo "The time was ${{hello.outputs.time}}"
+        
